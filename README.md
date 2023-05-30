@@ -9,7 +9,7 @@ Biometra is a cutting-edge web3 wallet that leverages biometric scanning technol
 ## Tech Stack Used | A Mean Cyre
 
 - **🧙 Ant Design**
-- **🔮 Moralis**
+- **🌠 Moralis**
 - **📜 Express**
 - **✨ Alchemy**
 - **🧪 Node**
