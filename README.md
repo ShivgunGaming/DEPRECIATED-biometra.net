@@ -6,7 +6,7 @@
 
 Biometra is a cutting-edge web3 wallet that leverages biometric scanning technology to provide secure and convenient authentication for blockchain transactions. With Biometra, users can seamlessly interact with decentralized applications (dApps) and manage their digital assets using their biometric data, ensuring the highest level of security and user experience.
 
-## Technologies used
+## Tech Stack used
 
 - **🍷 React**
 - **🧙 Ant Design**
@@ -17,7 +17,6 @@ Biometra is a cutting-edge web3 wallet that leverages biometric scanning technol
 - **🧪 Node**
 - **🍺 Yarn**
 - **💀 Css**
-
 ## Features
 
 - **Biometric Authentication**: Biometra utilizes advanced biometric scanning technology, such as fingerprint or face recognition, to verify user identity and authorize transactions securely.
