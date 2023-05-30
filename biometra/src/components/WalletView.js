@@ -81,7 +81,7 @@ function WalletView({
             <>
               {nfts.map((e, i) => {
                 return (
-                  <>
+                  <div key={i}>
                     {e && (
                       <img
                         key={i}
@@ -90,7 +90,7 @@ function WalletView({
                         src={e}
                       />
                     )}
-                  </>
+                  </div>
                 );
               })}
               <p className="frontPageBottom">Copyright © Biometra</p>
