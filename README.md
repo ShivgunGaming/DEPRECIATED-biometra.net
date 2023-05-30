@@ -1,17 +1,50 @@
 ## biometra.net
 🧬 Biometra, your decentralized Web3 wallet for secure asset protection, control, and seamless management in decentralized finance.
 
-## About Biometra
+# Biometra - Web3 Wallet for Biometric Scanning
 
-Welcome to Biometra, your trusted Biometric Scanning Web3 Wallet. We provide state of the art biometric security solutions to protect your digital assets and ensure seamless access to your Web3 accounts. With our cutting edge technology, you can experience the convenience and peace of mind that comes with secure and effortless authentication. Say goodbye to complex passwords and hello to a new era of hassle-free and highly secure digital transactions. Join Biometra today and take control of your Web3 wallet like never before.
+![biometra-bannner](https://github.com/ShivgunGaming/biometra.net/assets/102505925/179994e2-0fd7-4d72-b146-3b7943ea9d19)
 
-## Services
+Biometra is a cutting-edge web3 wallet that leverages biometric scanning technology to provide secure and convenient authentication for blockchain transactions. With Biometra, users can seamlessly interact with decentralized applications (dApps) and manage their digital assets using their biometric data, ensuring the highest level of security and user experience.
 
-Secure Biometric Authentication:
-Biometra offers advanced biometric scanning technology to ensure secure and convenient authentication for your Web3 transactions. Say goodbye to passwords and enjoy seamless access with just a touch or a glance.
-##
-Effortless Transaction Management:
-With Biometra, managing your Web3 transactions becomes effortless. Our intuitive interface allows you to easily send, receive, and monitor your digital assets, providing a smooth and user-friendly experience.
-##
-Unparalleled Security:
-Your digital assets deserve the highest level of security. Biometra employs cutting-edge encryption and decentralized storage to safeguard your funds and personal information, giving you peace of mind and protection against cyber threats.
+## Technologies used
+
+- **🍷 React**
+- **🧙 Ant Design**
+- **🧪 Node**
+- **📜 Express**
+- **🔮 Ethers**
+- **🪄 Moralis**
+- **✨ Alchemy**
+- **🍺 Yarn**
+- **💀 CSS**
+## Features
+
+- **Biometric Authentication**: Biometra utilizes advanced biometric scanning technology, such as fingerprint or face recognition, to verify user identity and authorize transactions securely.
+- **Web3 Integration**: Biometra seamlessly integrates with popular blockchain networks, allowing users to interact with dApps and manage their digital assets directly from the wallet.
+- **Secure Key Storage**: Biometra employs state-of-the-art encryption techniques to securely store private keys and sensitive user information, ensuring protection against unauthorized access.
+- **User-Friendly Interface**: The intuitive and user-friendly interface of Biometra makes it easy for both beginners and experienced users to navigate and perform various wallet operations effortlessly.
+- **Cross-Platform Compatibility**: Biometra is available on multiple platforms, including web, desktop, and mobile, providing users with a consistent and accessible experience across devices.
+
+## Getting Started
+
+Follow these steps to get started with Biometra:
+
+1. **Clone the Repository**:
+``
+git clone https://github.com/your-username/biometra.git
+``
+2. **Install Dependencies**:
+`` cd biometra ``
+`` yarn install ``
+
+4. **Run the Application**:
+`` yarn start ``
+
+**This is for the Frontend of the dApp only**
+
+## Contact
+
+For any inquiries or feedback, please visit our website [www.biometra.com](https://6469d2e41b7ff.site123.me/).
+
+Follow us on Twitter: [@biometra_net](https://twitter.com/biometra_net).
