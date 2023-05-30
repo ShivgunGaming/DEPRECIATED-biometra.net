@@ -46,7 +46,7 @@ function WalletView({
                 itemLayout="horizontal"
                 dataSource={tokens}
                 renderItem={(item, index) => (
-                  <List.Item style={{ textAlign: "left" }}>
+                  <List.Item key={item.id ? item.id.toString() : index} style={{ textAlign: "left" }}>
                     <List.Item.Meta
                       avatar={<Avatar src={item.logo || logo} />}
                       title={item.symbol}
