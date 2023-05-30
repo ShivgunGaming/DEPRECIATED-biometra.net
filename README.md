@@ -40,7 +40,7 @@ git clone https://github.com/your-username/biometra.git
 4. **Run the Application**:
 `` yarn start ``
 
-**This is for the Frontend of the dApp only**
+**This is for the Frontend of Biometra only**
 
 ## Contact
 
