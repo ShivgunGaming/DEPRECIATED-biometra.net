@@ -1,4 +1,4 @@
-## Biometra.net
+## Biometra.net | One Scan, Endless Possibilities
 
 # Biometra - Web3 Wallet for Biometric Scanning
 
