@@ -13,15 +13,6 @@ function App() {
   const [wallet, setWallet] = useState(null);
   const [seedPhrase, setSeedPhrase] = useState(null);
   const [selectedChain, setSelectedChain] = useState("0x1");
-  // const [theme, setTheme] = useState("light");
-
-  /* const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    // You can add additional logic here to save the theme preference in local storage or a user preference store.
-    <Switch checked={theme === "dark"} onChange={toggleTheme} /> Return statement
-  };
-  */
 
   return (
     <div className = "App">
