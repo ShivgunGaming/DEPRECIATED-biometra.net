@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "../styles/index.module.css";
 import buttonStyles from "../styles/button.module.css";
 import FaceCamera from "./FaceCamera";
