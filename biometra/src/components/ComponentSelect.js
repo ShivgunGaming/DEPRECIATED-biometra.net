@@ -1,27 +1,20 @@
+import React from "react";
 import styles from "../styles/button.module.css";
 
 function ComponentSelect({ setStep }) {
-  const handleDocumentClick = () => {
-    setStep("DOCUMENT_CAPTURE");
-  };
-
-  const handleFaceClick = () => {
-    setStep("FACE_CAPTURE");
-  };
-
-  const handleMagnifEyeLivenessClick = () => {
-    setStep("MAGNIFEYE_LIVENESS");
+  const handleClick = (step) => {
+    setStep(step);
   };
 
   return (
     <div>
-      <button className={styles.primary} onClick={handleDocumentClick}>
+      <button className={styles.primary} onClick={() => handleClick("DOCUMENT_CAPTURE")}>
         Document
       </button>
-      <button className={styles.primary} onClick={handleFaceClick}>
+      <button className={styles.primary} onClick={() => handleClick("FACE_CAPTURE")}>
         Face
       </button>
-      <button className={styles.primary} onClick={handleMagnifEyeLivenessClick}>
+      <button className={styles.primary} onClick={() => handleClick("MAGNIFEYE_LIVENESS")}>
         MagnifEye Liveness
       </button>
     </div>
