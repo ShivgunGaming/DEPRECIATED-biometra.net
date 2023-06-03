@@ -1,3 +1,4 @@
+//Reduced all 8 js biometric scanning components to one function and 2 variables
 import React, { useState } from "react";
 import styles from "../styles/index.module.css";
 import buttonStyles from "../styles/button.module.css";
