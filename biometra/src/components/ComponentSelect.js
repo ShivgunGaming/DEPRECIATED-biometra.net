@@ -1,3 +1,4 @@
+//Reduced all 8 js components to one function and 2 variables
 import React from "react";
 import styles from "../styles/button.module.css";
 
