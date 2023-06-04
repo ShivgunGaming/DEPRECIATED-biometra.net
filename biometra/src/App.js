@@ -10,6 +10,7 @@ import RecoverAccount from "./components/RecoverAccount.js";
 import WalletView from "./components/WalletView.js";
 import "@innovatrics/dot-face-auto-capture";
 
+//Dot face auto capture integrated, need to add UI component
 const FaceCamera = (props) => {
   useEffect(() => {
     const faceAutoCaptureHTMLElement = document.getElementById(
