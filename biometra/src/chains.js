@@ -1,3 +1,5 @@
+//Cross-chain wallet
+
 const Ethereum = {
     hex: '0x1',
     name: 'Ethereum',
