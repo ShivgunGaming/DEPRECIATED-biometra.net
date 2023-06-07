@@ -1,4 +1,5 @@
 //Reduced all 8 js biometric scanning components to one function and 2 variables
+//Innovatrics component
 import React, { useEffect } from "react";
 
 function DocumentCamera(props) {
