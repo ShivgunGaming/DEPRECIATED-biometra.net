@@ -1,12 +1,12 @@
-## Biometra.net | One Scan, Endless Possibilities!
+# Biometra | Web3 Wallet for Biometric Scanning
 
-# Biometra - Web3 Wallet for Biometric Scanning
+> One Scan, Endless Possibilities!
 
 ![biometra-bannner](https://github.com/ShivgunGaming/biometra.net/assets/102505925/179994e2-0fd7-4d72-b146-3b7943ea9d19)
 
 Biometra is a cutting-edge web3 wallet that leverages biometric scanning technology to provide secure and convenient authentication for blockchain transactions. With Biometra, users can seamlessly interact with decentralized applications (dApps) and manage their digital assets using their biometric data, ensuring the highest level of security and user experience.
 
-## Tech Stack Used
+# ⭐️ `Tech Stack`
 
 - **Ant Design 🧙**
 - **Moralis 🌠**
@@ -17,7 +17,8 @@ Biometra is a cutting-edge web3 wallet that leverages biometric scanning technol
 - **Yarn 🍺**
 - **React 🍷**
 - **Ethers 🔮**
-## Features
+
+## 🧰 `Features`
 
 - **Biometric Authentication**: Biometra utilizes advanced biometric scanning technology, such as fingerprint or face recognition, to verify user identity and authorize transactions securely.
 - **Web3 Integration**: Biometra seamlessly integrates with popular blockchain networks, allowing users to interact with dApps and manage their digital assets directly from the wallet.
@@ -25,20 +26,26 @@ Biometra is a cutting-edge web3 wallet that leverages biometric scanning technol
 - **User-Friendly Interface**: The intuitive and user-friendly interface of Biometra makes it easy for both beginners and experienced users to navigate and perform various wallet operations effortlessly.
 - **Cross-Platform Compatibility**: Biometra is available on multiple platforms, including web, desktop, and mobile, providing users with a consistent and accessible experience across devices.
 
-## Quick Start 🚀
+## 🚀 `Quick Start`
 
 Follow these steps to get started with Biometra:
 
-1. **Clone the Repository**:
-``
+📄 Clone or fork `biometra.net`:
+```
 git clone https://github.com/your-username/biometra.git
-``
-2. **Install Dependencies**:
-`` cd biometra ``
-`` yarn install ``
+```
+💿 Install all dependencies:
+``` 
+cd biometra 
+```
+``` 
+yarn install 
+```
 
-4. **Run the Application**:
-`` yarn start ``
+🚴‍♂️ Run your App:
+``` 
+yarn start 
+```
 
 **This is for the Frontend of Biometra only**
 
