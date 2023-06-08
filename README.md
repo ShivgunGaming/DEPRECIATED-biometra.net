@@ -53,7 +53,7 @@ yarn start
 
 ![tokens](https://github.com/ShivgunGaming/biometra.net/assets/102505925/00e42492-08a5-4f53-8ec4-b2b9432b5cac)
 
-📨 `<Address />` : **Login authentication and displays tokens from different chains.**
+📨 `<Tokens />` : **Login authentication and displays tokens from different chains.**
 
 ![native-balance](https://github.com/ShivgunGaming/biometra.net/assets/102505925/89dd6578-474b-4639-9435-b88588b81e09)
 
