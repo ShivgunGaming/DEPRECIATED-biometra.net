@@ -25,7 +25,7 @@ Biometra is a cutting-edge web3 wallet that leverages biometric scanning technol
 - **User-Friendly Interface**: The intuitive and user-friendly interface of Biometra makes it easy for both beginners and experienced users to navigate and perform various wallet operations effortlessly.
 - **Cross-Platform Compatibility**: Biometra is available on multiple platforms, including web, desktop, and mobile, providing users with a consistent and accessible experience across devices.
 
-## Getting Started
+## Quick Start 🚀
 
 Follow these steps to get started with Biometra:
 
