@@ -42,6 +42,15 @@ git clone https://github.com/your-username/biometra.git
 
 **This is for the Frontend of Biometra only**
 
+## Biometra Components
+
+![tokens](https://github.com/ShivgunGaming/biometra.net/assets/102505925/00e42492-08a5-4f53-8ec4-b2b9432b5cac)
+
+![native-balance](https://github.com/ShivgunGaming/biometra.net/assets/102505925/89dd6578-474b-4639-9435-b88588b81e09)
+
+![nfts](https://github.com/ShivgunGaming/biometra.net/assets/102505925/14c5a71c-4f55-4836-9463-fece708b78cb)
+
+
 ## Contact
 
 For any inquiries or feedback, please visit our website [www.biometra.com](https://6469d2e41b7ff.site123.me/).
