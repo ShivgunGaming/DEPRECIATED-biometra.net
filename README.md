@@ -57,8 +57,11 @@ yarn start
 
 ![native-balance](https://github.com/ShivgunGaming/biometra.net/assets/102505925/89dd6578-474b-4639-9435-b88588b81e09)
 
+📨 `<Native Balance />` : **Login authentication and displays the native balance from different chains.**
+
 ![nfts](https://github.com/ShivgunGaming/biometra.net/assets/102505925/14c5a71c-4f55-4836-9463-fece708b78cb)
 
+📨 `<NFTs />` : **Login authentication and displays the NFTs from different chains.**
 
 ## Contact
 
