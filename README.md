@@ -49,7 +49,7 @@ yarn start
 
 **This is for the Frontend of Biometra only**
 
-## `Biometra Components`
+## 📚 `Biometra Components`
 
 ![home](https://github.com/ShivgunGaming/biometra.net/assets/102505925/18de7fdd-b23c-465e-9191-d004d3cc7f89)
 
