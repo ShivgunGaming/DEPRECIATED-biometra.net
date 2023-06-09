@@ -51,6 +51,10 @@ yarn start
 
 ## 📚 `Biometra Components`
 
+![home](https://github.com/ShivgunGaming/biometra.net/assets/102505925/18de7fdd-b23c-465e-9191-d004d3cc7f89)
+
+🏠 `<Home />` : **Home page for Biometra. Buttons to create or recover wallet.**
+
 ![createwallet](https://github.com/ShivgunGaming/biometra.net/assets/102505925/043ce33e-64fe-45d3-afc7-f3cf8d6efbe3)
 
 🐉 `<CreateWallet />` : **The CreateWallet component for Biometra.**
@@ -58,10 +62,6 @@ yarn start
 ![recoverwallet](https://github.com/ShivgunGaming/biometra.net/assets/102505925/6fe6d219-71b5-4995-8c01-9f0648f74da5)
 
 🔎 `<RecoverWallet />` : **The RecoverWallet component for Biometra.**
-
-![home](https://github.com/ShivgunGaming/biometra.net/assets/102505925/18de7fdd-b23c-465e-9191-d004d3cc7f89)
-
-🏠 `<Home />` : **Home page for Biometra. Buttons to create or recover wallet.**
 
 ![tokens](https://github.com/ShivgunGaming/biometra.net/assets/102505925/00e42492-08a5-4f53-8ec4-b2b9432b5cac)
 
