@@ -1,4 +1,5 @@
 //Cross-chain wallet
+//MATIC Tx not working
 
 const Ethereum = {
     hex: '0x1',
