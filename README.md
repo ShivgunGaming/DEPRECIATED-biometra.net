@@ -51,6 +51,10 @@ yarn start
 
 ## 📚 `Biometra Components`
 
+![createwallet](https://github.com/ShivgunGaming/biometra.net/assets/102505925/043ce33e-64fe-45d3-afc7-f3cf8d6efbe3)
+
+🏠 `<CreateWallet />` : **The CreateWallet component for Biometra.**
+
 ![home](https://github.com/ShivgunGaming/biometra.net/assets/102505925/18de7fdd-b23c-465e-9191-d004d3cc7f89)
 
 🏠 `<Home />` : **Home page for Biometra. Buttons to create or recover wallet.**
