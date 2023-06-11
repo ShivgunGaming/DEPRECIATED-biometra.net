@@ -1,26 +1,28 @@
 //Reduced all 8 js components to one function and 2 variables
 //Innovatrics components
-import React from "react";
-import styles from "../styles/button.module.css";
+import React from 'react';
+import styles from '../styles/button.module.css';
 
-function ComponentSelect({ setStep }) {
+const ComponentSelect = ({ setStep }) => {
   const handleClick = (step) => {
     setStep(step);
   };
 
+  const buttons = [
+    { label: 'Document', step: 'DOCUMENT_CAPTURE' },
+    { label: 'Face', step: 'FACE_CAPTURE' },
+    { label: 'MagnifEye Liveness', step: 'MAGNIFEYE_LIVENESS' },
+  ];
+
   return (
     <div>
-      <button className={styles.primary} onClick={() => handleClick("DOCUMENT_CAPTURE")}>
-        Document
-      </button>
-      <button className={styles.primary} onClick={() => handleClick("FACE_CAPTURE")}>
-        Face
-      </button>
-      <button className={styles.primary} onClick={() => handleClick("MAGNIFEYE_LIVENESS")}>
-        MagnifEye Liveness
-      </button>
+      {buttons.map(({ label, step }) => (
+        <button key={step} className={styles.primary} onClick={() => handleClick(step)}>
+          {label}
+        </button>
+      ))}
     </div>
   );
-}
+};
 
 export default ComponentSelect;
