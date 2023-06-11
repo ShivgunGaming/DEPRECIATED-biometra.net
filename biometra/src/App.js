@@ -1,5 +1,6 @@
 //Main App.js code
 //Still need to add biometrics to Biometra
+//Still need to add Auto Face Capture UI Library
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { Select } from 'antd';
