@@ -1,4 +1,5 @@
 //Main App.js code
+//Still need to add biometrics to Biometra
 
 import React from 'react';
 import "./App.css";
