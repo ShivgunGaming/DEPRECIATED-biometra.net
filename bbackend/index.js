@@ -1,4 +1,6 @@
 // Biometra Backend App - Node & Express | Will need backend initialization for Biometrics
+// Will need to store the faces in Node / Express backend
+
 const express = require("express");
 const Moralis = require("moralis").default;
 const app = express();
