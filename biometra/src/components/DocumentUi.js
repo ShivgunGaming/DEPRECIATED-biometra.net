@@ -1,22 +1,21 @@
 //Reduced all 8 js biometric scanning components to one function and 2 variables
-import React, { useEffect } from "react";
 
-function DocumentUi(props) {
+import React, { useEffect, useRef } from 'react';
+
+const DocumentUi = (props) => {
+  const uiElementRef = useRef(null);
+
   useEffect(() => {
     const initializeDocumentUi = () => {
-      const uiElement = document.getElementById(
-        "x-dot-document-auto-capture-ui"
-      );
-
-      if (uiElement) {
-        uiElement.props = props;
+      if (uiElementRef.current) {
+        uiElementRef.current.props = props;
       }
     };
 
     initializeDocumentUi();
   }, [props]);
 
-  return <x-dot-document-auto-capture-ui id="x-dot-document-auto-capture-ui" />;
-}
+  return <x-dot-document-auto-capture-ui ref={uiElementRef} />;
+};
 
 export default DocumentUi;
