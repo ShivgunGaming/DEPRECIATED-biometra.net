@@ -1,4 +1,5 @@
 //Need to implement FaceUI next to Biometra
+//FaceUi library fixed
 import React, { useEffect } from "react";
 
 function FaceUi(props) {
