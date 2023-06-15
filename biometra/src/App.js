@@ -66,7 +66,6 @@ function App() {
           options={[
             { label: "Ethereum", value: "0x1" },
             { label: "Mumbai", value: "0x13881" },
-            { label: "Polygon", value: "0x89" },
             { label: "Avalanche", value: "0xa86a" },
             { label: "Binance", value: "0x38" },
           ]}
