@@ -95,3 +95,5 @@ const CreateAccountBio = ({ setSeedPhrase, setWallet }) => {
     </>
   );
 };
+
+export default CreateAccountBio;
