@@ -19,3 +19,17 @@ const FaceCamera = (props) => {
     id: "x-dot-face-auto-capture",
   });
 };
+
+const FaceUi = (props) => {
+  useEffect(() => {
+    const uiElement = document.getElementById("x-dot-face-auto-capture-ui");
+
+    if (uiElement) {
+      uiElement.props = props;
+    }
+  });
+
+  return React.createElement("x-dot-face-auto-capture-ui", {
+    id: "x-dot-face-auto-capture-ui",
+  });
+};
