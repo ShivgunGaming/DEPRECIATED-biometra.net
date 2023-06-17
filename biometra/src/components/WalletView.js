@@ -33,125 +33,6 @@ function WalletView({
   const [processing, setProcessing] = useState(false);
   const [hash, setHash] = useState(null);
 
-  const items = [
-    {
-      key: "3",
-      label: "Tokens",
-      children: (
-        <>
-          {tokens ? (
-            <>
-              <List
-                bordered
-                itemLayout="horizontal"
-                dataSource={tokens}
-                renderItem={(item, index) => (
-                  <List.Item key={item.id ? item.id.toString() : index} style={{ textAlign: "left" }}>
-                    <List.Item.Meta
-                      avatar={<Avatar src={item.logo || logo} />}
-                      title={item.symbol}
-                      description={item.name}
-                    />
-                    <div>
-                      {(
-                        Number(item.balance) /
-                        10 ** Number(item.decimals)
-                      ).toFixed(2)}{" "}
-                    </div>
-                  </List.Item>
-                )}
-              />
-              <p className="frontPageBottom">Copyright © Biometra</p>
-            </>
-          ) : (
-            <>
-              <span>You seem to not have any tokens yet </span>
-              <p className="frontPageBottom">Copyright © Biometra</p>
-            </>
-          )}
-        </>
-      ),
-    },
-    {
-      key: "2",
-      label: "NFTs",
-      children: (
-        <>
-          {nfts ? (
-            <>
-              {nfts.map((e, i) => {
-                return (
-                  <div key={i}>
-                    {e && (
-                      <img
-                        key={i}
-                        className="nftImage"
-                        alt="nftImage"
-                        src={e}
-                      />
-                    )}
-                  </div>
-                );
-              })}
-              <p className="frontPageBottom">Copyright © Biometra</p>
-            </>
-          ) : (
-            <>
-              <span>You seem to not have any tokens yet </span>
-              <p className="frontPageBottom">Copyright © Biometra</p>
-            </>
-          )}
-        </>
-      ),
-    },
-    {
-      key: "1",
-      label: "Transfer",
-      children: (
-        <>
-          <h3>Native Balance</h3>
-          <h1>
-            {balance.toFixed(4)} {CHAINS_CONFIG[selectedChain].ticker}
-          </h1>
-          <div className="sendRow">
-            <p style={{ width: "90px", textAlign: "left" }}> To:</p>
-            <Input
-              value={sendToAddress}
-              onChange={(e) => setSendToAddress(e.target.value)}
-              placeholder="0x..."
-            />
-          </div>
-          <div className="sendRow">
-            <p style={{ width: "90px", textAlign: "left" }}> Amount:</p>
-            <Input
-              value={amountToSend}
-              onChange={(e) => setAmountToSend(e.target.value)}
-              placeholder="Native tokens you wish to send..."
-            />
-          </div>
-          <Button
-            style={{ width: "100%", marginTop: "20px", marginBottom: "20px" }}
-            type="primary"
-            onClick={() => sendTransaction(sendToAddress, amountToSend)}
-          >
-            {" "}
-            Send Tokens{" "}
-          </Button>
-          {processing && (
-            <>
-              <Spin />
-              {hash && (
-                <Tooltip title={hash}>
-                  <p>Hover For Tx Hash</p>
-                </Tooltip>
-              )}
-            </>
-          )}
-        </>
-      ),
-    },
-  ];
-
   async function sendTransaction(to, amount) {
     const chain = CHAINS_CONFIG[selectedChain];
 
@@ -201,17 +82,17 @@ function WalletView({
       },
     });
 
-    const responce = res.data;
+    const response = res.data;
 
-    if (responce.tokens.length > 0) {
-      setTokens(responce.tokens);
+    if (response.tokens.length > 0) {
+      setTokens(response.tokens);
     }
 
-    if (responce.nfts.length > 0) {
-      setNfts(responce.nfts);
+    if (response.nfts.length > 0) {
+      setNfts(response.nfts);
     }
 
-    setBalance(responce.balance);
+    setBalance(response.balance);
 
     setFetching(false);
   }
@@ -231,15 +112,7 @@ function WalletView({
     setTokens(null);
     setBalance(0);
     getAccountTokens();
-  }, []);
-
-  useEffect(() => {
-    if (!wallet) return;
-    setNfts(null);
-    setTokens(null);
-    setBalance(0);
-    getAccountTokens();
-  }, [selectedChain]);
+  }, [wallet, selectedChain]);
 
   return (
     <div className="content">
@@ -256,7 +129,104 @@ function WalletView({
       {fetching ? (
         <Spin />
       ) : (
-        <Tabs defaultActiveKey="1" items={items} className="walletView" />
+        <Tabs defaultActiveKey="1" className="walletView">
+          <Tabs.TabPane tab="Tokens" key="3">
+            {tokens ? (
+              <>
+                <List
+                  bordered
+                  itemLayout="horizontal"
+                  dataSource={tokens}
+                  renderItem={(item, index) => (
+                    <List.Item
+                      key={item.id ? item.id.toString() : index}
+                      style={{ textAlign: "left" }}
+                    >
+                      <List.Item.Meta
+                        avatar={<Avatar src={item.logo || logo} />}
+                        title={item.symbol}
+                        description={item.name}
+                      />
+                      <div>
+                        {(
+                          Number(item.balance) /
+                          10 ** Number(item.decimals)
+                        ).toFixed(2)}{" "}
+                      </div>
+                    </List.Item>
+                  )}
+                />
+              </>
+            ) : (
+              <>
+                <span>You seem to not have any tokens yet </span>
+              </>
+            )}
+          </Tabs.TabPane>
+          <Tabs.TabPane tab="NFTs" key="2">
+            {nfts ? (
+              <>
+                {nfts.map((e, i) => {
+                  return (
+                    <div key={i}>
+                      {e && (
+                        <img
+                          key={i}
+                          className="nftImage"
+                          alt="nftImage"
+                          src={e}
+                        />
+                      )}
+                    </div>
+                  );
+                })}
+              </>
+            ) : (
+              <>
+                <span>You seem to not have any tokens yet </span>
+              </>
+            )}
+          </Tabs.TabPane>
+          <Tabs.TabPane tab="Transfer" key="1">
+            <h3>Native Balance</h3>
+            <h1>
+              {balance.toFixed(4)} {CHAINS_CONFIG[selectedChain].ticker}
+            </h1>
+            <div className="sendRow">
+              <p style={{ width: "90px", textAlign: "left" }}>To:</p>
+              <Input
+                value={sendToAddress}
+                onChange={(e) => setSendToAddress(e.target.value)}
+                placeholder="0x..."
+              />
+            </div>
+            <div className="sendRow">
+              <p style={{ width: "90px", textAlign: "left" }}>Amount:</p>
+              <Input
+                value={amountToSend}
+                onChange={(e) => setAmountToSend(e.target.value)}
+                placeholder="Native tokens you wish to send..."
+              />
+            </div>
+            <Button
+              style={{ width: "100%", marginTop: "20px", marginBottom: "20px" }}
+              type="primary"
+              onClick={() => sendTransaction(sendToAddress, amountToSend)}
+            >
+              Send Tokens
+            </Button>
+            {processing && (
+              <>
+                <Spin />
+                {hash && (
+                  <Tooltip title={hash}>
+                    <p>Hover For Tx Hash</p>
+                  </Tooltip>
+                )}
+              </>
+            )}
+          </Tabs.TabPane>
+        </Tabs>
       )}
     </div>
   );
