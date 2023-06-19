@@ -32,7 +32,7 @@ Follow these steps to get started with Biometra:
 
 📄 Clone or fork `biometra.net`:
 ```
-git clone https://github.com/your-username/biometra.git
+git clone https://github.com/ShivgunGaming/biometra.git
 ```
 💿 Install all dependencies:
 ``` 
