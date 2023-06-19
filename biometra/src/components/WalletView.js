@@ -156,10 +156,12 @@ function WalletView({
                     </List.Item>
                   )}
                 />
+                <p className="frontPageBottom">Copyright © Biometra</p>
               </>
             ) : (
               <>
                 <span>You seem to not have any tokens yet </span>
+                <p className="frontPageBottom">Copyright © Biometra</p>
               </>
             )}
           </Tabs.TabPane>
@@ -180,10 +182,12 @@ function WalletView({
                     </div>
                   );
                 })}
+                <p className="frontPageBottom">Copyright © Biometra</p>
               </>
             ) : (
               <>
                 <span>You seem to not have any tokens yet </span>
+                <p className="frontPageBottom">Copyright © Biometra</p>
               </>
             )}
           </Tabs.TabPane>
