@@ -77,7 +77,6 @@ h2 {
   color: #ffffff; /* White text color for dark mode */
 }
 
-
 a:visited {
   color: blue;
 }
@@ -97,9 +96,30 @@ header {
   margin-left: 20px;
 }
 
-.dropdown {
-  margin-right: 20px;
+.dropdown .ant-select-selector,
+.dropdown .ant-select-selector:hover,
+.dropdown .ant-select-selector:focus {
+  background-color: #ffffff; /* Default background color */
+  color: #333333; /* Default text color */
 }
+
+.App.dark .dropdown .ant-select-selector,
+.App.dark .dropdown .ant-select-selector:hover,
+.App.dark .dropdown .ant-select-selector:focus {
+  background-color: #333333; /* Background color for dark mode */
+  color: #ffffff; /* Text color for dark mode */
+}
+
+.dropdown .ant-select-selector .ant-select-selection-item,
+.dropdown .ant-select-selector .ant-select-arrow svg {
+  color: #333333; /* Default color */
+}
+
+.App.dark .dropdown .ant-select-selector .ant-select-selection-item,
+.App.dark .dropdown .ant-select-selector .ant-select-arrow svg {
+  color: #ffffff; /* Color for dark mode */
+}
+
 
 .content {
   text-align: center;
@@ -140,12 +160,17 @@ header {
   border-color: #666666; /* Darker border color for dark mode */
 }
 
-
 .seedPhraseContainer {
   width: 310px;
   min-height: 160px;
   padding: 5px;
   margin-top: 30px;
+  background-color: white; /* Default background color */
+}
+
+.App.dark .seedPhraseContainer {
+  background-color: #222222; /* Background color for dark mode */
+  color: #ffffff; /* Text color for dark mode */
 }
 
 .walletName {
@@ -175,6 +200,20 @@ header {
   padding: 10px;
   height: 100%;
   overflow-y: auto;
+  color: #333333; /* Default text color */
+}
+
+.walletView .token {
+  color: #333333; /* Default text color */
+}
+
+.App.dark .walletView .token {
+  color: #ffffff; /* Text color for dark mode */
+}
+
+
+.App.dark .walletView {
+  color: #ffffff; /* Text color for dark mode */
 }
 
 .sendRow {
