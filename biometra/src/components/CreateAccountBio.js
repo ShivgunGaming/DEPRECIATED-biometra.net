@@ -1,3 +1,4 @@
+/*
 import React, { useEffect, useState } from "react";
 import { Button, Card } from "antd";
 import { ExclamationCircleOutlined } from "@ant-design/icons";
@@ -95,5 +96,6 @@ const CreateAccountBio = ({ setSeedPhrase, setWallet }) => {
     </>
   );
 };
+*/
 
 export default CreateAccountBio;
