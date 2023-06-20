@@ -71,9 +71,13 @@ yarn start
 
 ![tokens](https://github.com/ShivgunGaming/biometra.net/assets/102505925/00e42492-08a5-4f53-8ec4-b2b9432b5cac)
 
+![biometra tokens dark](https://github.com/ShivgunGaming/biometra.net/assets/102505925/fff42670-da29-4eae-90d9-162eeadaadbf)
+
 🟡 `<Tokens />` : **Login authentication and displays tokens from different chains.**
 
 ![native-balance](https://github.com/ShivgunGaming/biometra.net/assets/102505925/89dd6578-474b-4639-9435-b88588b81e09)
+
+![nativebalance](https://github.com/ShivgunGaming/biometra.net/assets/102505925/f9917f6e-91af-420f-ae5b-231ff2abcd3d)
 
 💸 `<Native Balance />` : **Login authentication and displays the native balance from different chains.**
 
