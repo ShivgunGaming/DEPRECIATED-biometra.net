@@ -53,6 +53,8 @@ yarn start
 
 ![home](https://github.com/ShivgunGaming/biometra.net/assets/102505925/18de7fdd-b23c-465e-9191-d004d3cc7f89)
 
+![Biometra Home Dark Theme](https://github.com/ShivgunGaming/biometra.net/assets/102505925/48fb2aeb-1ae5-4697-8e96-8ed27977250b)
+
 🏠 `<Home />` : **Home page for Biometra. Buttons to create or recover wallet.**
 
 ![createwallet](https://github.com/ShivgunGaming/biometra.net/assets/102505925/043ce33e-64fe-45d3-afc7-f3cf8d6efbe3)
