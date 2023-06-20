@@ -83,6 +83,9 @@ yarn start
 
 ![nfts](https://github.com/ShivgunGaming/biometra.net/assets/102505925/14c5a71c-4f55-4836-9463-fece708b78cb)
 
+![nfts](https://github.com/ShivgunGaming/biometra.net/assets/102505925/938924a9-983d-46ff-92df-7684d26346c8)
+
+
 🖼️ `<NFTs />` : **Login authentication and displays the NFTs from different chains.**
 
 ## Contact
