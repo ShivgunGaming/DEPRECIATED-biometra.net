@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { BulbOutlined } from "@ant-design/icons";
 import { Button, Input } from "antd";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { ethers } from "ethers";
 
 const { TextArea } = Input;
@@ -12,12 +11,12 @@ function RecoverAccount({ setWallet, setSeedPhrase }) {
   const [typedSeed, setTypedSeed] = useState("");
   const [nonValid, setNonValid] = useState(false);
 
-  function seedAdjust(e) {
+  const seedAdjust = (e) => {
     setNonValid(false);
     setTypedSeed(e.target.value);
-  }
+  };
 
-  function recoverWallet() {
+  const recoverWallet = () => {
     let recoveredWallet;
     try {
       recoveredWallet = ethers.Wallet.fromPhrase(typedSeed);
@@ -29,8 +28,7 @@ function RecoverAccount({ setWallet, setSeedPhrase }) {
     setSeedPhrase(typedSeed);
     setWallet(recoveredWallet.address);
     navigate("/yourwallet");
-    return;
-  }
+  };
 
   return (
     <>
@@ -39,7 +37,7 @@ function RecoverAccount({ setWallet, setSeedPhrase }) {
           <BulbOutlined style={{ fontSize: "20px" }} />
           <div>
             Type your seed phrase in the field below to recover your wallet (it
-            should include 12 words seperated with spaces)
+            should include 12 words separated with spaces)
           </div>
         </div>
         <TextArea
@@ -47,15 +45,14 @@ function RecoverAccount({ setWallet, setSeedPhrase }) {
           onChange={seedAdjust}
           rows={4}
           className="seedPhraseContainer"
-          placeholder="Type your seed phrase here..."
         />
         <Button
           disabled={
             typedSeed.split(" ").length !== 12 || typedSeed.slice(-1) === " "
           }
-          className="frontPageButton"
+          className="frontPageRecoverButton"
           type="primary"
-          onClick={() => recoverWallet()}
+          onClick={recoverWallet}
         >
           Recover Wallet
         </Button>
