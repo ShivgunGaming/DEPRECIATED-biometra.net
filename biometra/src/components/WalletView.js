@@ -1,4 +1,3 @@
-//footer added
 import React, { useEffect, useState } from "react";
 import {
   Divider,
@@ -23,6 +22,7 @@ function WalletView({
   seedPhrase,
   setSeedPhrase,
   selectedChain,
+  darkMode,
 }) {
   const navigate = useNavigate();
   const [tokens, setTokens] = useState(null);
@@ -116,7 +116,7 @@ function WalletView({
   }, [wallet, selectedChain]);
 
   return (
-    <div className="content">
+    <div className={`content ${darkMode ? "dark" : "light"}`}>
       <div className="logoutButton" onClick={logout}>
         <LogoutOutlined />
       </div>
@@ -133,7 +133,7 @@ function WalletView({
         <Tabs defaultActiveKey="1" className="walletView">
           <Tabs.TabPane tab="Tokens" key="3">
             {tokens ? (
-              <>
+              <div className={darkMode ? "tokenRow dark" : "tokenRow"}>
                 <List
                   bordered
                   itemLayout="horizontal"
@@ -142,26 +142,29 @@ function WalletView({
                     <List.Item
                       key={item.id ? item.id.toString() : index}
                       style={{ textAlign: "left" }}
+                      className={darkMode ? "token dark" : "token"}
                     >
                       <List.Item.Meta
                         avatar={<Avatar src={item.logo || logo} />}
-                        title={item.symbol}
-                        description={item.name}
+                        title={<span className="tokenText">{item.symbol}</span>}
+                        description={
+                          <span className="tokenText">{item.name}</span>
+                        }
                       />
-                      <div>
+                      <div className="tokenText">
                         {(
                           Number(item.balance) /
                           10 ** Number(item.decimals)
-                        ).toFixed(2)}{" "}
+                        ).toFixed(2)}
                       </div>
                     </List.Item>
                   )}
                 />
                 <p className="frontPageBottom">Copyright © Biometra</p>
-              </>
+              </div>
             ) : (
               <>
-                <span>You seem to not have any tokens yet </span>
+                <span>You seem to not have any tokens yet</span>
                 <p className="frontPageBottom">Copyright © Biometra</p>
               </>
             )}
