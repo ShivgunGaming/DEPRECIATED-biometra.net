@@ -19,3 +19,7 @@ code {
 .ant-tabs-nav-wrap {
   justify-content: center !important;
 }
+
+body.dark .token {
+  color: #ffffff; /* Text color for dark mode */
+}
