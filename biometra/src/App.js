@@ -99,7 +99,7 @@ function App() {
           </Routes>
         ) : (
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home darkMode={darkMode} />} />
             <Route
               path="/recover"
               element={
