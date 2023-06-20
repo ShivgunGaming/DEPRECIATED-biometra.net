@@ -23,7 +23,7 @@ Biometra is a cutting-edge web3 wallet that leverages biometric scanning technol
 - **Biometric Authentication**: Biometra utilizes advanced biometric scanning technology, such as fingerprint or face recognition, to verify user identity and authorize transactions securely.
 - **Web3 Integration**: Biometra seamlessly integrates with popular blockchain networks, allowing users to interact with dApps and manage their digital assets directly from the wallet.
 - **Secure Key Storage**: Biometra employs state-of-the-art encryption techniques to securely store private keys and sensitive user information, ensuring protection against unauthorized access.
-- **User-Friendly Interface**: The intuitive and user-friendly interface of Biometra makes it easy for both beginners and experienced users to navigate and perform various wallet operations effortlessly.
+- **User-Friendly Interface**: The intuitive and user-friendly interface of Biometra, including a theme toggler, makes it easy for both beginners and experienced users to navigate and perform various wallet operations effortlessly.
 - **Cross-Platform Compatibility**: Biometra is available on multiple platforms, including web, desktop, and mobile, providing users with a consistent and accessible experience across devices.
 
 ## 🚀 `Quick Start`
