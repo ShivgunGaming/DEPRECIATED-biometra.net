@@ -254,6 +254,11 @@ header {
   align-items: center;
 }
 
+.darkerPlaceholder::placeholder {
+  color: #36393f; /* Darker color */
+}
+
+
 .nftImage {
   margin-bottom: 10px;
   height: 240px;
