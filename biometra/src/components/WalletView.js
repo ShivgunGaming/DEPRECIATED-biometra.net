@@ -130,50 +130,58 @@ function WalletView({
       {fetching ? (
         <Spin />
       ) : (
-        <Tabs defaultActiveKey="1" className="walletView">
-          <Tabs.TabPane tab="Tokens" key="3">
-            {tokens ? (
-              <div className={darkMode ? "tokenRow dark" : "tokenRow"}>
-                <List
-                  bordered
-                  itemLayout="horizontal"
-                  dataSource={tokens}
-                  renderItem={(item, index) => (
-                    <List.Item
-                      key={item.id ? item.id.toString() : index}
-                      style={{ textAlign: "left" }}
-                      className={darkMode ? "token dark" : "token"}
-                    >
-                      <List.Item.Meta
-                        avatar={<Avatar src={item.logo || logo} />}
-                        title={<span className="tokenText">{item.symbol}</span>}
-                        description={
-                          <span className="tokenText">{item.name}</span>
-                        }
-                      />
-                      <div className="tokenText">
-                        {(
-                          Number(item.balance) /
-                          10 ** Number(item.decimals)
-                        ).toFixed(2)}
-                      </div>
-                    </List.Item>
-                  )}
-                />
-                <p className="frontPageBottom">Copyright © Biometra</p>
-              </div>
-            ) : (
-              <>
-                <span>You seem to not have any tokens yet</span>
-                <p className="frontPageBottom">Copyright © Biometra</p>
-              </>
-            )}
-          </Tabs.TabPane>
-          <Tabs.TabPane tab="NFTs" key="2">
-            {nfts ? (
-              <>
-                {nfts.map((e, i) => {
-                  return (
+        <Tabs
+          defaultActiveKey="1"
+          className="walletView"
+          items={[
+            {
+              key: "3",
+              label: "Tokens",
+              children: tokens ? (
+                <div className={darkMode ? "tokenRow dark" : "tokenRow"}>
+                  <List
+                    bordered
+                    itemLayout="horizontal"
+                    dataSource={tokens}
+                    renderItem={(item, index) => (
+                      <List.Item
+                        key={item.id ? item.id.toString() : index}
+                        style={{ textAlign: "left" }}
+                        className={darkMode ? "token dark" : "token"}
+                      >
+                        <List.Item.Meta
+                          avatar={<Avatar src={item.logo || logo} />}
+                          title={
+                            <span className="tokenText">{item.symbol}</span>
+                          }
+                          description={
+                            <span className="tokenText">{item.name}</span>
+                          }
+                        />
+                        <div className="tokenText">
+                          {(
+                            Number(item.balance) /
+                            10 ** Number(item.decimals)
+                          ).toFixed(2)}
+                        </div>
+                      </List.Item>
+                    )}
+                  />
+                  <p className="frontPageBottom">Copyright © Biometra</p>
+                </div>
+              ) : (
+                <>
+                  <span>You seem to not have any tokens yet</span>
+                  <p className="frontPageBottom">Copyright © Biometra</p>
+                </>
+              ),
+            },
+            {
+              key: "2",
+              label: "NFTs",
+              children: nfts ? (
+                <>
+                  {nfts.map((e, i) => (
                     <div key={i}>
                       {e && (
                         <img
@@ -184,60 +192,70 @@ function WalletView({
                         />
                       )}
                     </div>
-                  );
-                })}
-                <p className="frontPageBottom">Copyright © Biometra</p>
-              </>
-            ) : (
-              <>
-                <span>You seem to not have any tokens yet </span>
-                <p className="frontPageBottom">Copyright © Biometra</p>
-              </>
-            )}
-          </Tabs.TabPane>
-          <Tabs.TabPane tab="Transfer" key="1">
-            <h3>Native Balance</h3>
-            <h1>
-              {balance.toFixed(4)} {CHAINS_CONFIG[selectedChain].ticker}
-            </h1>
-            <div className="sendRow">
-              <p style={{ width: "90px", textAlign: "left" }}>To:</p>
-              <Input
-                className="inputText darkerPlaceholder"
-                value={sendToAddress}
-                onChange={(e) => setSendToAddress(e.target.value)}
-                placeholder="0x..."
-              />
-            </div>
-            <div className="sendRow">
-              <p style={{ width: "90px", textAlign: "left" }}>Amount:</p>
-              <Input
-                className="inputText darkerPlaceholder"
-                value={amountToSend}
-                onChange={(e) => setAmountToSend(e.target.value)}
-                placeholder="Native tokens you wish to send..."
-              />
-            </div>
+                  ))}
+                  <p className="frontPageBottom">Copyright © Biometra</p>
+                </>
+              ) : (
+                <>
+                  <span>You seem to not have any tokens yet </span>
+                  <p className="frontPageBottom">Copyright © Biometra</p>
+                </>
+              ),
+            },
+            {
+              key: "1",
+              label: "Transfer",
+              children: (
+                <>
+                  <h3>Native Balance</h3>
+                  <h1>
+                    {balance.toFixed(4)} {CHAINS_CONFIG[selectedChain].ticker}
+                  </h1>
+                  <div className="sendRow">
+                    <p style={{ width: "90px", textAlign: "left" }}>To:</p>
+                    <Input
+                      className="inputText darkerPlaceholder"
+                      value={sendToAddress}
+                      onChange={(e) => setSendToAddress(e.target.value)}
+                      placeholder="0x..."
+                    />
+                  </div>
+                  <div className="sendRow">
+                    <p style={{ width: "90px", textAlign: "left" }}>Amount:</p>
+                    <Input
+                      className="inputText darkerPlaceholder"
+                      value={amountToSend}
+                      onChange={(e) => setAmountToSend(e.target.value)}
+                      placeholder="Native tokens you wish to send..."
+                    />
+                  </div>
 
-            <Button
-              style={{ width: "100%", marginTop: "20px", marginBottom: "20px" }}
-              type="primary"
-              onClick={() => sendTransaction(sendToAddress, amountToSend)}
-            >
-              Send Tokens
-            </Button>
-            {processing && (
-              <>
-                <Spin />
-                {hash && (
-                  <Tooltip title={hash}>
-                    <p>Hover For Tx Hash</p>
-                  </Tooltip>
-                )}
-              </>
-            )}
-          </Tabs.TabPane>
-        </Tabs>
+                  <Button
+                    style={{
+                      width: "100%",
+                      marginTop: "20px",
+                      marginBottom: "20px",
+                    }}
+                    type="primary"
+                    onClick={() => sendTransaction(sendToAddress, amountToSend)}
+                  >
+                    Send Tokens
+                  </Button>
+                  {processing && (
+                    <>
+                      <Spin />
+                      {hash && (
+                        <Tooltip title={hash}>
+                          <p>Hover For Tx Hash</p>
+                        </Tooltip>
+                      )}
+                    </>
+                  )}
+                </>
+              ),
+            },
+          ]}
+        />
       )}
     </div>
   );
