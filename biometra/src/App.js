@@ -73,15 +73,12 @@ function App() {
             value={selectedChain}
             options={[
               { label: "Ethereum", value: "0x1" },
-              { label: "Avalanche", value: "0xa86a" },
-              { label: "Binance", value: "0x38" },
             ]}
-            className="dropdown"
+            className={`dropdown ${darkMode ? 'dark' : ''}`}
           />
         </div>
       </header>
       <div className="content">
-
         {wallet && seedPhrase ? (
           <Routes>
             <Route
@@ -122,7 +119,7 @@ function App() {
         )}
       </div>
     </div>
-  );  
+  );
 }
 
 export default App;
