@@ -73,20 +73,20 @@ yarn start
 
 ![biometra tokens dark](https://github.com/ShivgunGaming/biometra.net/assets/102505925/fff42670-da29-4eae-90d9-162eeadaadbf)
 
-🟡 `<Tokens />` : **Login authentication and displays tokens from different chains.**
+🟡 `<Tokens />` : **Login authentication and displays tokens from Ethereum Chain, soon Avalanche C Chain and Binance Smart Chain.**
 
 ![native-balance](https://github.com/ShivgunGaming/biometra.net/assets/102505925/89dd6578-474b-4639-9435-b88588b81e09)
 
 ![nativebalance](https://github.com/ShivgunGaming/biometra.net/assets/102505925/f9917f6e-91af-420f-ae5b-231ff2abcd3d)
 
-💸 `<Native Balance />` : **Login authentication and displays the native balance from different chains.**
+💸 `<Native Balance />` : **Login authentication and displays the native balance Ethereum Chain, soon Avalanche C Chain and Binance Smart Chain.**
 
 ![nfts](https://github.com/ShivgunGaming/biometra.net/assets/102505925/14c5a71c-4f55-4836-9463-fece708b78cb)
 
 ![nfts](https://github.com/ShivgunGaming/biometra.net/assets/102505925/938924a9-983d-46ff-92df-7684d26346c8)
 
 
-🖼️ `<NFTs />` : **Login authentication and displays the NFTs from different chains.**
+🖼️ `<NFTs />` : **Login authentication and displays the NFTs Ethereum Chain, soon Avalanche C Chain and Binance Smart Chain.**
 
 ## Contact
 
