@@ -8,13 +8,6 @@ const Ethereum = {
     ticker: 'ETH'
   };
   
-  const MumbaiTestnet = {
-    hex: '0x13881',
-    name: 'Mumbai Testnet',
-    rpcUrl: 'Enter your chain rpc url here',
-    ticker: 'MATIC'
-  };
-  
   const Avalanche = {
     hex: '0xa86a',
     name: 'Avalanche Mainnet',
@@ -31,7 +24,6 @@ const Ethereum = {
   
   export const CHAINS_CONFIG = {
     '0x1': Ethereum,
-    '0x13881': MumbaiTestnet,
     '0xa86a': Avalanche,
     '0x38': Binance,
   };
