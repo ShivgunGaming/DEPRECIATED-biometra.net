@@ -19,7 +19,7 @@ const FaceCamera = (props) => {
     if (faceAutoCaptureHTMLElement) {
       faceAutoCaptureHTMLElement.cameraOptions = props;
     }
-  });
+  }, [props]);
 
   return <x-dot-face-auto-capture id="x-dot-face-auto-capture" />;
 };
@@ -31,12 +31,12 @@ const FaceUi = (props) => {
     if (uiElement) {
       uiElement.props = props;
     }
-  });
+  }, [props]);
 
   return <x-dot-face-auto-capture-ui id="x-dot-face-auto-capture-ui" />;
 };
 
-function App() {
+const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [wallet, setWallet] = useState(null);
   const [seedPhrase, setSeedPhrase] = useState(null);
@@ -52,6 +52,57 @@ function App() {
     alert(error);
   }, []);
 
+  const handleDarkModeChange = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
+  const handleChainChange = (val) => {
+    setSelectedChain(val);
+  };
+
+  const renderRoutes = () => {
+    if (wallet && seedPhrase) {
+      return (
+        <Route
+          path="/yourwallet"
+          element={
+            <WalletView
+              wallet={wallet}
+              setWallet={setWallet}
+              seedPhrase={seedPhrase}
+              setSeedPhrase={setSeedPhrase}
+              selectedChain={selectedChain}
+            />
+          }
+        />
+      );
+    }
+
+    return (
+      <>
+        <Route path="/" element={<Home darkMode={darkMode} />} />
+        <Route
+          path="/recover"
+          element={
+            <RecoverAccount
+              setSeedPhrase={setSeedPhrase}
+              setWallet={setWallet}
+            />
+          }
+        />
+        <Route
+          path="/yourwallet"
+          element={
+            <CreateAccount
+              setSeedPhrase={setSeedPhrase}
+              setWallet={setWallet}
+            />
+          }
+        />
+      </>
+    );
+  };
+
   return (
     <div className={`App ${darkMode ? "dark" : "light"}`}>
       <header>
@@ -63,13 +114,13 @@ function App() {
           />
           <Switch
             checked={darkMode}
-            onChange={() => setDarkMode((prevMode) => !prevMode)}
+            onChange={handleDarkModeChange}
             checkedChildren="Dark Mode"
             unCheckedChildren="Light Mode"
             className="themeToggler"
           />
           <Select
-            onChange={(val) => setSelectedChain(val)}
+            onChange={handleChainChange}
             value={selectedChain}
             options={[
               { label: "Ethereum", value: "0x1" },
@@ -79,47 +130,10 @@ function App() {
         </div>
       </header>
       <div className="content">
-        {wallet && seedPhrase ? (
-          <Routes>
-            <Route
-              path="/yourwallet"
-              element={
-                <WalletView
-                  wallet={wallet}
-                  setWallet={setWallet}
-                  seedPhrase={seedPhrase}
-                  setSeedPhrase={setSeedPhrase}
-                  selectedChain={selectedChain}
-                />
-              }
-            />
-          </Routes>
-        ) : (
-          <Routes>
-            <Route path="/" element={<Home darkMode={darkMode} />} />
-            <Route
-              path="/recover"
-              element={
-                <RecoverAccount
-                  setSeedPhrase={setSeedPhrase}
-                  setWallet={setWallet}
-                />
-              }
-            />
-            <Route
-              path="/yourwallet"
-              element={
-                <CreateAccount
-                  setSeedPhrase={setSeedPhrase}
-                  setWallet={setWallet}
-                />
-              }
-            />
-          </Routes>
-        )}
+        <Routes>{renderRoutes()}</Routes>
       </div>
     </div>
   );
-}
+};
 
 export default App;
