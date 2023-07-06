@@ -90,6 +90,6 @@ yarn start
 
 ## Contact
 
-For any inquiries or feedback, please visit our website [www.biometra.net](https://6469d2e41b7ff.site123.me/).
+For any inquiries or feedback, please visit our website [www.biometra.net](https://biometra.vercel.app/).
 
 Follow us on Twitter: [@biometra_net](https://twitter.com/biometra_net).
